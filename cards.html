@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbars - UIverse</title>
+  <title>Cards - UIverse</title>
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
 
@@ -15,23 +16,112 @@
     <h2>UIverse</h2>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="button.html">Buttons</a></li>
-      <li><a href="cards.html">Cards</a></li>
+      <li><a href="Navbar.html">Navbars</a></li>
+      <li class="active"><a href="cards.html">Cards</a></li>
       <li><a href="footer.html">Footer</a></li>
       <li><a href="form.html">Forms</a></li>
       <li><a href="color.html">Colors</a></li>
-      <li class="active"><a href="navbar.html">Navbars</a></li>
+      <li><a href="button.html">Buttons</a></li>
     </ul>
   </aside>
 
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Header -->
+    <div class="page-header">
+      <h1>Cards</h1>
+      <p>Reusable and beautiful card components</p>
+    </div>
+
+    <!-- Simple Card -->
+    <div class="component-card">
+      <h3>Simple Card</h3>
+      <div style="background: #f5f5f5; padding: 20px; border-radius: 8px;">
+        <div style="background: white; padding: 20px; border-radius: 8px;">
+          <h4 style="margin: 0 0 10px 0;">Card Title</h4>
+          <p style="margin: 0 0 15px 0; color: #666;">This is a simple card component with a clean design.</p>
+          <button class="gradient-btn">Learn More</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button onclick="toggleCode('c1')">View Code</button>
+        <button onclick="copyCode('c1')">Copy</button>
+      </div>
+
+      <pre id="c1" class="code-block">
+&lt;div class="card"&gt;
+  &lt;h4&gt;Card Title&lt;/h4&gt;
+  &lt;p&gt;This is a simple card component with a clean design.&lt;/p&gt;
+  &lt;button class="gradient-btn"&gt;Learn More&lt;/button&gt;
+&lt;/div&gt;
+      </pre>
+    </div>
+
+    <!-- Product Card -->
+    <div class="component-card">
+      <h3>Product Card</h3>
+      <div style="background: #f5f5f5; padding: 20px; border-radius: 8px;">
+        <div style="background: white; padding: 20px; border-radius: 8px;">
+          <h4 style="margin: 0 0 5px 0;">Premium Product</h4>
+          <p style="margin: 0 0 15px 0; color: #999; font-size: 14px;">$49.99</p>
+          <p style="margin: 0 0 15px 0; color: #666;">High-quality product with amazing features.</p>
+          <button class="outline-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button onclick="toggleCode('c2')">View Code</button>
+        <button onclick="copyCode('c2')">Copy</button>
+      </div>
+
+      <pre id="c2" class="code-block">
+&lt;div class="product-card"&gt;
+  &lt;h4&gt;Premium Product&lt;/h4&gt;
+  &lt;p&gt;$49.99&lt;/p&gt;
+  &lt;p&gt;High-quality product with amazing features.&lt;/p&gt;
+  &lt;button class="outline-btn"&gt;Add to Cart&lt;/button&gt;
+&lt;/div&gt;
+      </pre>
+    </div>
+
+    <!-- Info Card -->
+    <div class="component-card">
+      <h3>Info Card</h3>
+      <div style="background: #f5f5f5; padding: 20px; border-radius: 8px;">
+        <div style="background: white; padding: 20px; border-radius: 8px;">
+          <h4 style="margin: 0 0 10px 0;">✨ Feature Highlight</h4>
+          <p style="margin: 0 0 15px 0; color: #666;">Lightweight, responsive and easy to customize card design.</p>
+          <button class="neon-btn">Get Started</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button onclick="toggleCode('c3')">View Code</button>
+        <button onclick="copyCode('c3')">Copy</button>
+      </div>
+
+      <pre id="c3" class="code-block">
+&lt;div class="info-card"&gt;
+  &lt;h4&gt;✨ Feature Highlight&lt;/h4&gt;
+  &lt;p&gt;Lightweight, responsive and easy to customize card design.&lt;/p&gt;
+  &lt;button class="neon-btn"&gt;Get Started&lt;/button&gt;
+&lt;/div&gt;
+      </pre>
+    </div>
+
+  </main>
+
 </div>
+
 <footer class="footer">
   <div class="footer-container">
 
     <!-- Brand -->
     <div class="footer-col">
-      <h2>Ulverse</h2>
-      <p>© 2026 Ulverse. All rights reserved.</p>
+      <h2>UIverse</h2>
+      <p>© 2026 UIverse. All rights reserved.</p>
       <div class="socials">
         <span>🌐</span>
         <span>💼</span>
@@ -41,9 +131,9 @@
     <!-- Pages -->
     <div class="footer-col">
       <h3>Pages</h3>
-      <p>Navbars</p>
-      <p>Forms</p>
+      <p>Cards</p>
       <p>Buttons</p>
+      <p>Forms</p>
     </div>
 
     <!-- Legal -->
@@ -55,5 +145,7 @@
 
   </div>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
