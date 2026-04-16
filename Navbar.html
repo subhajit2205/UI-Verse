@@ -28,6 +28,7 @@
   </div>
 </nav>
 <div class="container">
+  <button class="hamburger" type="button" aria-label="Toggle menu" onclick="toggleSidebar()">☰</button>
 
   <!-- Sidebar -->
   <aside class="sidebar">
@@ -35,13 +36,14 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="button.html">Buttons</a></li>
+      <li class="active"><a href="navbar.html">Navbars</a></li>
       <li><a href="cards.html">Cards</a></li>
       <li><a href="footer.html">Footer</a></li>
       <li><a href="form.html">Forms</a></li>
       <li><a href="color.html">Colors</a></li>
-      <li class="active"><a href="navbar.html">Navbars</a></li>
     </ul>
   </aside>
+  <div class="sidebar-backdrop" onclick="toggleSidebar()"></div>
 
   <!-- Main -->
   <main class="main">
@@ -126,6 +128,7 @@
 
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 <script src="script.js"></script>
 </html>
