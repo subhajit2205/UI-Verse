@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/Public/favicon.ico" />
-  <title>UIverse</title>
+  <title>Navbars - UIverse</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <nav class="navbar">
+ 
+ <nav class="navbar">
   <!-- Logo -->
   <div class="logo">Ulverse</div>
 
@@ -28,17 +27,16 @@
     <a href="#"></a>
   </div>
 </nav>
-
-
- 
+<div class="container">
+  <button class="hamburger" type="button" aria-label="Toggle menu" onclick="toggleSidebar()">☰</button>
 
   <!-- Sidebar -->
   <aside class="sidebar">
     <h2>UIverse</h2>
     <ul>
-      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="button.html">Buttons</a></li>
-      <li><a href="navbar.html">Navbars</a></li>
+      <li class="active"><a href="navbar.html">Navbars</a></li>
       <li><a href="cards.html">Cards</a></li>
       <li><a href="footer.html">Footer</a></li>
       <li><a href="form.html">Forms</a></li>
@@ -48,38 +46,56 @@
   <div class="sidebar-backdrop" onclick="toggleSidebar()"></div>
 
   <!-- Main -->
-   <div class="content">
-  <main class="main home">
+  <main class="main">
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>Welcome to UIverse 🚀</h1>
-      <p>A collection of reusable UI components for developers.</p>
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>Navbars</h1>
+      <p>Reusable and modern navigation bars</p>
+    </div>
 
-      <a href="button.html" class="explore-btn">
-        Explore Components →
-      </a>
-    </section>
+    <!-- Simple Navbar -->
+    <div class="component-card" data-name="simple navbar basic links">
+      <h3>Simple Navbar</h3>
 
-    <!-- Features -->
-    <section class="features">
+      <div class="nav-preview">
+        <nav class="nav-simple">
+          <h4>UIverse</h4>
+          <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </div>
 
-  <div class="feature-card component-card">
-    <h3>🎨 Reusable Components</h3>
-    <p>Use ready-made UI components in your projects instantly.</p>
-  </div>
+    <!-- Center Navbar -->
+    <div class="component-card" data-name="centered navbar menu clean">
+      <h3>Centered Navbar</h3>
 
-  <div class="feature-card component-card">
-    <h3>🧩 Beginner Friendly</h3>
-    <p>Perfect for learning and contributing to open source.</p>
-  </div>
+      <div class="nav-preview">
+        <nav class="nav-center">
+          <a href="#">Home</a>
+          <a href="#">Features</a>
+          <a href="#">Docs</a>
+        </nav>
+      </div>
+    </div>
 
-  <div class="feature-card component-card">
-    <h3>⚡ Fast & Simple</h3>
-    <p>No frameworks, just clean HTML, CSS, and JS.</p>
-  </div>
+    <!-- Button Navbar -->
+    <div class="component-card" data-name="button navbar login dark">
+      <h3>Button Navbar</h3>
 
-</section>
+      <div class="nav-preview">
+        <nav class="nav-btn">
+          <h4>UIverse</h4>
+          <button>Login</button>
+        </nav>
+      </div>
+    </div>
+
+  </main>
 
 </div>
 <footer class="footer">
@@ -106,7 +122,7 @@
     <!-- Legal -->
     <div class="footer-col">
       <h3>Legal</h3>
-      <p id="privacy-policy"><a href="privacypolicy.html">Privacy Policy</a></p>
+      <p>Privacy Policy</p>
       <p>Terms of Service</p>
     </div>
 
@@ -114,4 +130,5 @@
 </footer>
 <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>

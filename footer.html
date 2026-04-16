@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/Public/favicon.ico" />
-  <title>UIverse</title>
+  <title>Footer - UIverse</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <nav class="navbar">
+   <nav class="navbar">
   <!-- Logo -->
   <div class="logo">Ulverse</div>
 
@@ -29,18 +27,18 @@
   </div>
 </nav>
 
-
- 
+<div class="container">
+  <button class="hamburger" type="button" aria-label="Toggle menu" onclick="toggleSidebar()">☰</button>
 
   <!-- Sidebar -->
   <aside class="sidebar">
     <h2>UIverse</h2>
     <ul>
-      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="button.html">Buttons</a></li>
       <li><a href="navbar.html">Navbars</a></li>
       <li><a href="cards.html">Cards</a></li>
-      <li><a href="footer.html">Footer</a></li>
+      <li class="active"><a href="footer.html">Footer</a></li>
       <li><a href="form.html">Forms</a></li>
       <li><a href="color.html">Colors</a></li>
     </ul>
@@ -48,38 +46,12 @@
   <div class="sidebar-backdrop" onclick="toggleSidebar()"></div>
 
   <!-- Main -->
-   <div class="content">
-  <main class="main home">
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>Welcome to UIverse 🚀</h1>
-      <p>A collection of reusable UI components for developers.</p>
-
-      <a href="button.html" class="explore-btn">
-        Explore Components →
-      </a>
-    </section>
-
-    <!-- Features -->
-    <section class="features">
-
-  <div class="feature-card component-card">
-    <h3>🎨 Reusable Components</h3>
-    <p>Use ready-made UI components in your projects instantly.</p>
-  </div>
-
-  <div class="feature-card component-card">
-    <h3>🧩 Beginner Friendly</h3>
-    <p>Perfect for learning and contributing to open source.</p>
-  </div>
-
-  <div class="feature-card component-card">
-    <h3>⚡ Fast & Simple</h3>
-    <p>No frameworks, just clean HTML, CSS, and JS.</p>
-  </div>
-
-</section>
+  <main class="main">
+    <div class="page-header">
+      <h1>Footer</h1>
+      <p>Reusable footer components — coming soon</p>
+    </div>
+  </main>
 
 </div>
 <footer class="footer">
@@ -106,7 +78,7 @@
     <!-- Legal -->
     <div class="footer-col">
       <h3>Legal</h3>
-      <p id="privacy-policy"><a href="privacypolicy.html">Privacy Policy</a></p>
+      <p>Privacy Policy</p>
       <p>Terms of Service</p>
     </div>
 

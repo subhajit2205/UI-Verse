@@ -6,383 +6,103 @@
   <title>Cards - UIverse</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ===== HOVER EFFECTS FOR ALL CARDS (Issue #48) ===== */
-
-    /* Profile Card hover - lift + deeper shadow */
+    /* ===== HOVER EFFECTS FOR CARDS ===== */
     .profile-card {
-      background: white;
-      border-radius: 16px;
-      padding: 28px 24px;
-      text-align: center;
-      max-width: 260px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      background: white; border-radius: 16px; padding: 28px 24px; text-align: center;
+      max-width: 260px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .profile-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 40px rgba(108,92,231,0.18);
-    }
-
-    /* Profile card internals */
+    .profile-card:hover { transform: translateY(-8px); box-shadow: 0 16px 40px rgba(108,92,231,0.18); }
+    
     .profile-avatar {
-      width: 70px; height: 70px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-      color: white;
-      font-size: 22px; font-weight: 700;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 14px;
-      transition: transform 0.3s ease;
+      width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+      color: white; font-size: 22px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px; transition: transform 0.3s ease;
     }
-    .profile-card:hover .profile-avatar {
-      transform: scale(1.08);
-    }
-    .profile-name {
-      font-size: 17px; font-weight: 700;
-      color: #2d3436; margin: 0 0 4px;
-    }
-    .profile-role {
-      font-size: 13px; color: #636e72; margin: 0 0 14px;
-    }
-    .profile-tags {
-      display: flex; gap: 6px; justify-content: center;
-      flex-wrap: wrap; margin-bottom: 16px;
-    }
-    .profile-tag {
-      background: #f0effe; color: #6c5ce7;
-      font-size: 11px; font-weight: 600;
-      padding: 3px 9px; border-radius: 20px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .profile-card:hover .profile-tag {
-      background: #6c5ce7; color: white;
-    }
-    .profile-btn {
-      padding: 8px 24px;
-      background: linear-gradient(45deg, #6c5ce7, #a29bfe);
-      color: white; border: none; border-radius: 8px;
-      cursor: pointer; font-weight: 600; font-size: 13px;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-    .profile-btn:hover { opacity: 0.88; transform: scale(1.04); }
+    .profile-card:hover .profile-avatar { transform: scale(1.08); }
 
-    /* Pricing Card hover - scale up slightly */
     .pricing-card {
-      background: white;
-      border: 2px solid #6c5ce7;
-      border-radius: 16px;
-      padding: 28px 22px;
-      max-width: 260px; text-align: center;
-      position: relative;
+      background: white; border: 2px solid #6c5ce7; border-radius: 16px; padding: 28px 22px;
+      max-width: 260px; text-align: center; position: relative;
       box-shadow: 0 8px 28px rgba(108,92,231,0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     }
-    .pricing-card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 20px 48px rgba(108,92,231,0.25);
-      border-color: #a29bfe;
-    }
-    .pricing-badge {
-      position: absolute; top: -13px; left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(45deg, #ff6b6b, #6c5ce7);
-      color: white; font-size: 11px; font-weight: 700;
-      padding: 4px 14px; border-radius: 20px; white-space: nowrap;
-    }
-    .pricing-plan { font-size: 20px; font-weight: 700; color: #2d3436; margin: 10px 0 16px; }
-    .pricing-price {
-      display: flex; align-items: baseline;
-      justify-content: center; gap: 2px; margin-bottom: 20px;
-    }
-    .pricing-currency { font-size: 18px; color: #6c5ce7; font-weight: 700; }
-    .pricing-amount { font-size: 40px; font-weight: 800; color: #2d3436; }
-    .pricing-period { font-size: 14px; color: #636e72; }
-    .pricing-features {
-      list-style: none; padding: 0;
-      text-align: left; margin-bottom: 20px;
-    }
-    .pricing-features li {
-      font-size: 13px; color: #636e72;
-      padding: 6px 0; border-bottom: 1px solid #f1f2f6;
-    }
-    .pricing-btn {
-      width: 100%; padding: 11px;
-      background: linear-gradient(45deg, #ff6b6b, #6c5ce7);
-      color: white; border: none; border-radius: 8px;
-      cursor: pointer; font-weight: 700; font-size: 14px;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-    .pricing-btn:hover { opacity: 0.88; transform: scale(1.02); }
-
-    /* Stats Card hover - lift + glow */
-    .stats-card {
-      background: white; border-radius: 14px;
-      padding: 22px 28px;
-      display: flex; align-items: center;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-      max-width: 340px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .stats-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 36px rgba(108,92,231,0.15);
-    }
-    .stats-item {
-      flex: 1; text-align: center;
-      display: flex; flex-direction: column; gap: 4px;
-    }
-    .stats-number {
-      font-size: 26px; font-weight: 800;
-      background: linear-gradient(45deg, #ff6b6b, #6c5ce7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      transition: transform 0.3s ease;
-    }
-    .stats-card:hover .stats-number {
-      transform: scale(1.1);
-    }
-    .stats-label { font-size: 12px; color: #636e72; font-weight: 500; }
-    .stats-divider { width: 1px; height: 40px; background: #dfe6e9; }
-
-    /* Notification Card hover - slide right + border glow */
+    .pricing-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 20px 48px rgba(108,92,231,0.25); border-color: #a29bfe; }
+    
+    /* Notification logic */
     .notif-card {
-      display: flex; align-items: flex-start; gap: 12px;
-      background: white;
-      border-left: 4px solid #6c5ce7;
-      border-radius: 10px; padding: 16px;
-      max-width: 340px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      animation: slideIn 0.4s ease;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      display: flex; align-items: flex-start; gap: 12px; background: white;
+      border-left: 4px solid #6c5ce7; border-radius: 10px; padding: 16px;
+      max-width: 340px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-    .notif-card:hover {
-      transform: translateX(4px);
-      box-shadow: 0 8px 28px rgba(108,92,231,0.18);
-      border-left-color: #a29bfe;
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(20px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    .notif-icon {
-      font-size: 22px; flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
-    .notif-card:hover .notif-icon {
-      transform: rotate(15deg) scale(1.15);
-    }
-    .notif-content { flex: 1; }
-    .notif-title { font-size: 14px; font-weight: 700; color: #2d3436; margin: 0 0 3px; }
-    .notif-msg { font-size: 12px; color: #636e72; margin: 0 0 5px; }
-    .notif-time { font-size: 11px; color: #b2bec3; margin: 0; }
-    .notif-close {
-      background: none; border: none;
-      font-size: 18px; color: #b2bec3;
-      cursor: pointer; padding: 0; line-height: 1;
-      transition: color 0.2s, transform 0.2s;
-    }
-    .notif-close:hover { color: #ff6b6b; transform: rotate(90deg); }
+    .notif-card:hover { transform: translateX(4px); box-shadow: 0 8px 28px rgba(108,92,231,0.18); }
   </style>
 </head>
 <body>
+
+<nav class="navbar">
+  <div class="logo">Ulverse</div>
+  <div class="search-bar">
+    <span class="nav-link active">Explore</span>
+    <input type="text" id="searchInput" placeholder="Search Components" />
+    <button class="search-btn">🔍</button>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn">Add Component</button>
+    <button class="nav-btn">My Collection</button>
+  </div>
+</nav>
+
 <div class="container">
-  <!-- Sidebar -->
+  <button class="hamburger" type="button" aria-label="Toggle menu" onclick="toggleSidebar()">☰</button>
+
   <aside class="sidebar">
     <h2>UIverse</h2>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="button.html">Buttons</a></li>
+      <li><a href="navbar.html">Navbars</a></li>
       <li class="active"><a href="cards.html">Cards</a></li>
       <li><a href="loaders.html">Loaders</a></li>
       <li><a href="toggles.html">Toggles</a></li>
+      <li><a href="footer.html">Footer</a></li>
+      <li><a href="form.html">Forms</a></li>
     </ul>
   </aside>
 
-  <!-- Main -->
   <main class="main">
-    <h1>Cards</h1>
+    <div class="page-header">
+      <h1>Cards</h1>
+      <p>Premium UI components with custom hover interactions.</p>
+    </div>
 
-    <!-- Profile Card -->
     <div class="component-card">
-      <h3>Profile Card</h3>
+      <h3>Profile Card (Hover Effect)</h3>
       <div class="profile-card">
         <div class="profile-avatar">LN</div>
         <h3 class="profile-name">Likhitha Nagraj</h3>
         <p class="profile-role">Embedded Systems Engineer</p>
-        <div class="profile-tags">
-          <span class="profile-tag">IoT</span>
-          <span class="profile-tag">STM32</span>
-          <span class="profile-tag">Python</span>
-        </div>
         <button class="profile-btn">Follow</button>
       </div>
       <div class="actions">
         <button onclick="toggleCode('cardCode1')">View Code</button>
         <button onclick="copyCode('cardCode1')">Copy</button>
       </div>
-      <pre id="cardCode1" class="code-block">&lt;div class="profile-card"&gt;
-  &lt;div class="profile-avatar"&gt;LN&lt;/div&gt;
-  &lt;h3 class="profile-name"&gt;Likhitha Nagraj&lt;/h3&gt;
-  &lt;p class="profile-role"&gt;Embedded Systems Engineer&lt;/p&gt;
-  &lt;div class="profile-tags"&gt;
-    &lt;span class="profile-tag"&gt;IoT&lt;/span&gt;
-    &lt;span class="profile-tag"&gt;STM32&lt;/span&gt;
-    &lt;span class="profile-tag"&gt;Python&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;button class="profile-btn"&gt;Follow&lt;/button&gt;
-&lt;/div&gt;
-
-/* Hover: lift + deeper shadow + avatar scale + tags fill */
-.profile-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.profile-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgba(108,92,231,0.18);
-}
-.profile-card:hover .profile-avatar {
-  transform: scale(1.08);
-}
-.profile-card:hover .profile-tag {
-  background: #6c5ce7;
-  color: white;
-}</pre>
     </div>
 
-    <!-- Pricing Card -->
-    <div class="component-card">
-      <h3>Pricing Card</h3>
-      <div class="pricing-card">
-        <div class="pricing-badge">Most Popular</div>
-        <h3 class="pricing-plan">Pro</h3>
-        <div class="pricing-price">
-          <span class="pricing-currency">₹</span>
-          <span class="pricing-amount">499</span>
-          <span class="pricing-period">/mo</span>
-        </div>
-        <ul class="pricing-features">
-          <li>✅ Unlimited Projects</li>
-          <li>✅ Priority Support</li>
-          <li>✅ Custom Domain</li>
-          <li>✅ Analytics Dashboard</li>
-          <li>❌ White Label</li>
-        </ul>
-        <button class="pricing-btn">Get Started</button>
-      </div>
-      <div class="actions">
-        <button onclick="toggleCode('cardCode2')">View Code</button>
-        <button onclick="copyCode('cardCode2')">Copy</button>
-      </div>
-      <pre id="cardCode2" class="code-block">&lt;div class="pricing-card"&gt;
-  &lt;div class="pricing-badge"&gt;Most Popular&lt;/div&gt;
-  &lt;h3 class="pricing-plan"&gt;Pro&lt;/h3&gt;
-  &lt;div class="pricing-price"&gt;...&lt;/div&gt;
-  &lt;ul class="pricing-features"&gt;...&lt;/ul&gt;
-  &lt;button class="pricing-btn"&gt;Get Started&lt;/button&gt;
-&lt;/div&gt;
-
-/* Hover: scale up + stronger border + deeper shadow */
-.pricing-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-.pricing-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 20px 48px rgba(108,92,231,0.25);
-  border-color: #a29bfe;
-}</pre>
-    </div>
-
-    <!-- Stats Card -->
-    <div class="component-card">
-      <h3>Stats Card</h3>
-      <div class="stats-card">
-        <div class="stats-item">
-          <span class="stats-number">128</span>
-          <span class="stats-label">Projects</span>
-        </div>
-        <div class="stats-divider"></div>
-        <div class="stats-item">
-          <span class="stats-number">4.8K</span>
-          <span class="stats-label">Stars</span>
-        </div>
-        <div class="stats-divider"></div>
-        <div class="stats-item">
-          <span class="stats-number">340</span>
-          <span class="stats-label">Forks</span>
-        </div>
-      </div>
-      <div class="actions">
-        <button onclick="toggleCode('cardCode3')">View Code</button>
-        <button onclick="copyCode('cardCode3')">Copy</button>
-      </div>
-      <pre id="cardCode3" class="code-block">&lt;div class="stats-card"&gt;
-  &lt;div class="stats-item"&gt;...&lt;/div&gt;
-  &lt;div class="stats-divider"&gt;&lt;/div&gt;
-  &lt;div class="stats-item"&gt;...&lt;/div&gt;
-  &lt;div class="stats-divider"&gt;&lt;/div&gt;
-  &lt;div class="stats-item"&gt;...&lt;/div&gt;
-&lt;/div&gt;
-
-/* Hover: lift + glow + numbers scale up */
-.stats-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.stats-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 36px rgba(108,92,231,0.15);
-}
-.stats-card:hover .stats-number {
-  transform: scale(1.1);
-}</pre>
-    </div>
-
-    <!-- Notification Card -->
-    <div class="component-card">
-      <h3>Notification Card</h3>
-      <div class="notif-card">
-        <div class="notif-icon">🔔</div>
-        <div class="notif-content">
-          <p class="notif-title">New PR Merged! 🎉</p>
-          <p class="notif-msg">Your contribution to UIverse was accepted.</p>
-          <p class="notif-time">2 minutes ago</p>
-        </div>
-        <button class="notif-close" onclick="this.parentElement.style.display='none'">×</button>
-      </div>
-      <div class="actions">
-        <button onclick="toggleCode('cardCode4')">View Code</button>
-        <button onclick="copyCode('cardCode4')">Copy</button>
-      </div>
-      <pre id="cardCode4" class="code-block">&lt;div class="notif-card"&gt;
-  &lt;div class="notif-icon"&gt;🔔&lt;/div&gt;
-  &lt;div class="notif-content"&gt;
-    &lt;p class="notif-title"&gt;New PR Merged!&lt;/p&gt;
-    &lt;p class="notif-msg"&gt;Your contribution was accepted.&lt;/p&gt;
-    &lt;p class="notif-time"&gt;2 minutes ago&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;button class="notif-close"&gt;×&lt;/button&gt;
-&lt;/div&gt;
-
-/* Hover: slide right + border glow + bell shake + × spins red */
-.notif-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-.notif-card:hover {
-  transform: translateX(4px);
-  box-shadow: 0 8px 28px rgba(108,92,231,0.18);
-  border-left-color: #a29bfe;
-}
-.notif-card:hover .notif-icon {
-  transform: rotate(15deg) scale(1.15);
-}
-.notif-close:hover {
-  color: #ff6b6b;
-  transform: rotate(90deg);
-}</pre>
-    </div>
-
-  </main>
+    </main>
 </div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h2>UIverse</h2>
+      <p>© 2026 UIverse. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
