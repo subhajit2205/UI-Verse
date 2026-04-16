@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbars - UIverse</title>
+  <title>Footer - UIverse</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
+  <button class="hamburger" type="button" aria-label="Toggle menu" onclick="toggleSidebar()">☰</button>
 
   <!-- Sidebar -->
   <aside class="sidebar">
@@ -16,13 +17,22 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="button.html">Buttons</a></li>
+      <li><a href="navbar.html">Navbars</a></li>
       <li><a href="cards.html">Cards</a></li>
-      <li><a href="footer.html">Footer</a></li>
+      <li class="active"><a href="footer.html">Footer</a></li>
       <li><a href="form.html">Forms</a></li>
       <li><a href="color.html">Colors</a></li>
-      <li class="active"><a href="navbar.html">Navbars</a></li>
     </ul>
   </aside>
+  <div class="sidebar-backdrop" onclick="toggleSidebar()"></div>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="page-header">
+      <h1>Footer</h1>
+      <p>Reusable footer components — coming soon</p>
+    </div>
+  </main>
 
 </div>
 <footer class="footer">
@@ -55,5 +65,6 @@
 
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>

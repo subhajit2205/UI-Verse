@@ -10,6 +10,7 @@
 <body>
 
 <div class="container">
+  <button class="hamburger" type="button" aria-label="Toggle menu" onclick="toggleSidebar()">☰</button>
 
   <!-- Sidebar -->
   <aside class="sidebar">
@@ -24,6 +25,7 @@
       <li><a href="color.html">Colors</a></li>
     </ul>
   </aside>
+  <div class="sidebar-backdrop" onclick="toggleSidebar()"></div>
 
   <!-- Main -->
   <main class="main home">
@@ -91,5 +93,6 @@
 
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
