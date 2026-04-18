@@ -395,7 +395,7 @@ body {
 
 /* Footer */
 .dark-mode .footer {
-  background: #d2d5fa;
+  background: #dcdcdc;
   border-top: 1px solid #1e293b;
 }
 
@@ -403,7 +403,12 @@ body {
 .dark-mode .footer-col p {
   color: rgb(0, 0, 0);
 }
-
+.dark-mode .footer-col h3{
+  color: rgb(0, 0, 0);
+}
+.dark-mode .footer-col h2 {
+  color: rgb(0, 0, 0);
+}
 
 .dark-mode .footer-col p:hover {
   color: #706ce9;
@@ -481,7 +486,5 @@ body {
 .nav-btn:hover {
   transform: translateY(-2px);
 }
-* {
-  transition: all 0.2s ease-in-out;
-}
+
 
