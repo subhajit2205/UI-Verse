@@ -752,3 +752,16 @@ nav a:hover {
 .student-card .profile-btn:hover {
   background: #000;
 }
+
+/*Terms of Service Page*/
+
+.terms-content{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 50px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
