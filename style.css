@@ -143,6 +143,17 @@ nav a:hover {
   color: white;
 }
 
+/* Main */
+.main {
+  margin-left: 240px;
+  padding: 40px;
+  width: calc(100% - 240px);
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; */
+  display: flex;
+  flex-direction: column;
+} 
 /* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
@@ -360,6 +371,37 @@ nav a:hover {
 }
 
 
+/* HERO */
+.hero {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-left {
+  max-width: 60%;
+}
+
+.hero-left h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero-left p {
+  color: #666;
+}
+
+/* BUTTON */
+.explore-btn {
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #ff6b6b, #6c5ce7);
+  color: white;
+
 /* Home Layout */
 .home {
   display: flex;
@@ -476,6 +518,9 @@ nav a:hover {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
+}
+
+/* FEATURES GRID */
   box-sizing: border-box;
 }
 
@@ -640,6 +685,8 @@ nav a:hover {
   font-size: 15px;
 }
 
+/* CARDS */
+.feature-card {
 .code-block.show {
   display: block;
 }
@@ -821,6 +868,59 @@ body.dark-mode .toast {
 .terms-content{
   max-width: 1400px;
   padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 15px;
+  border: 6px solid #ddd;
+  outline: none;
+}
+
+/* FEATURED SECTION */
+.featured {
+  margin-bottom: 30px;
+}
+
+.featured h2 {
+  margin-bottom: 15px;
+}
+
+.featured-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* IMPROVED HOVER */
+.feature-card {
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  background: #d5aade;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.search-bar input:hover {
+  border-color: #6c5ce7;
+}
   margin: 50px auto;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
